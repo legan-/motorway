@@ -2,7 +2,7 @@
   "arrowParens": "avoid",
   "bracketSameLine": false,
   "bracketSpacing": true,
-  "importOrder": ["^@core/(.*)$", "^./(.*)$", "^../(.*)$"],
+  "importOrder": ["^@core/(.*)$", "^(components|types)(/(.*))?$", "^./(.*)$", "^../(.*)$"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "jsxBracketSameLine": false,
