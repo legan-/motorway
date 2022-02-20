@@ -3,16 +3,16 @@ import React, { VFC } from 'react';
 import Img from 'react-cool-img';
 import { FiX } from 'react-icons/fi';
 
-import { Image } from 'types';
+import { ImageData } from 'types';
 
 import './Preview.css';
 
 type PreviewProps = {
-  imageUrl: Image['url'];
-  imageAlt: Image['alt_description'];
-  profileImageUrl: Image['user']['profile_image'];
-  firstName: Image['user']['first_name'];
-  lastName: Image['user']['last_name'];
+  imageUrl: ImageData['url'];
+  imageAlt: ImageData['alt_description'];
+  profileImageUrl: ImageData['user']['profile_image'];
+  firstName: ImageData['user']['first_name'];
+  lastName: ImageData['user']['last_name'];
   onClose: () => void;
 };
 

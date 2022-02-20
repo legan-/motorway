@@ -3,16 +3,16 @@ import React, { VFC } from 'react';
 import Img from 'react-cool-img';
 import { FiHeart } from 'react-icons/fi';
 
-import { Image as ImageType } from 'types';
+import { ImageData } from 'types';
 
 import './Card.css';
 
 type CardProps = {
-  id: ImageType['id'];
-  likes: ImageType['likes'];
-  imageUrl: ImageType['url'];
-  imageAlt: ImageType['alt_description'];
-  onClick: (id: ImageType['id']) => void;
+  id: ImageData['id'];
+  likes: ImageData['likes'];
+  imageUrl: ImageData['url'];
+  imageAlt: ImageData['alt_description'];
+  onClick: (id: ImageData['id']) => void;
 };
 
 export const Card: VFC<CardProps> = ({ id, imageUrl, imageAlt, likes, onClick }) => {

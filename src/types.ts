@@ -1,4 +1,4 @@
-export type Image = {
+export type ImageData = {
   id: string;
   created_at: string;
   updated_at: string;
@@ -24,6 +24,6 @@ export type Image = {
   };
 };
 
-export type Images = {
-  [id: string]: Image;
+export type ImagesObject = {
+  [id: string]: ImageData;
 };
