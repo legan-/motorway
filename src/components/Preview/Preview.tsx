@@ -1,4 +1,5 @@
 import React, { VFC } from 'react';
+import { FiX } from 'react-icons/fi';
 
 import { Image } from 'types';
 
@@ -25,9 +26,10 @@ export const Preview: VFC<PreviewProps> = ({
 
   return (
     <div className="preview">
-      <div className="preview-background" onClick={onClose} />
-      <div className="preview-container">
-        <img className="preview-image" src={`${imageUrl}.jpg`} alt={imageAlt} />
+      <div className="background" onClick={onClose} />
+      <FiX className="close-button" size={60} onClick={onClose} />
+      <div className="container">
+        <img className="image" src={`${imageUrl}.jpg`} alt={imageAlt} />
         <div className="user-details">
           {profileImageUrl.length ? (
             <img className="profile-image" src={`${profileImageUrl}.webp`} alt={fullName} />

@@ -1,4 +1,4 @@
-.preview .preview-background {
+.preview .background {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,16 @@
   background-color: rgba(0, 0, 0, .94);
 }
 
-.preview .preview-container {
+.preview .close-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #EEE;
+  cursor: pointer;
+}
+
+.preview .container {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,14 +26,14 @@
   pointer-events: none;
 }
 
-.preview .preview-container .preview-image {
+.preview .container .image {
   height: 100%;
   width: 100%;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
-.preview .preview-container .user-details {
+.preview .container .user-details {
   display: inline-flex;
   position: absolute;
   bottom: 0;
@@ -35,12 +44,12 @@
   margin-bottom: 20px;
 }
 
-.preview .preview-container .user-details .profile-image {
+.preview .container .user-details .profile-image {
   height: 40px;
   width: 40px;
   border-radius: 20px;
 }
-.preview .preview-container .user-details .profile-image-placeholder {
+.preview .container .user-details .profile-image-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +57,7 @@
   color: #EEE;
 }
 
-.preview .preview-container .user-details .user-name {
+.preview .container .user-details .user-name {
   margin-left: 10px;
   color: #EEE;
 }

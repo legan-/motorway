@@ -43,8 +43,15 @@ export const App = () => {
         <Message>Loading...</Message>
       ) : images ? (
         <Grid>
-          {Object.values(images).map(image => (
-            <Card key={image.id} details={image} onClick={id => setCurrentImageId(id)} />
+          {Object.values(images).map(({ id, url, likes, alt_description: alt }) => (
+            <Card
+              key={id}
+              id={id}
+              imageAlt={alt}
+              imageUrl={url}
+              likes={likes}
+              onClick={id => setCurrentImageId(id)}
+            />
           ))}
         </Grid>
       ) : (
