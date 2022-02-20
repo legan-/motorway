@@ -1,5 +1,6 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { VFC } from 'react';
+import Img from 'react-cool-img';
 import { FiX } from 'react-icons/fi';
 
 import { Image } from 'types';
@@ -35,11 +36,16 @@ export const Preview: VFC<PreviewProps> = ({
       <div className="container">
         <div className="background" onClick={onClose} />
         <div className="image-wrapper">
-          <img className="image" src={`${imageUrl}.jpg`} alt={imageAlt} />
+          <Img className="image" src={`${imageUrl}.jpg`} alt={imageAlt} />
         </div>
         <div className="user-details">
           {profileImageUrl.length ? (
-            <img className="profile-image" src={`${profileImageUrl}.webp`} alt={fullName} />
+            <Img
+              className="profile-image"
+              src={`${profileImageUrl}.webp`}
+              alt={fullName}
+              style={{ backgroundColor: '#777' }}
+            />
           ) : (
             // profile picture placeholder
             <div className="profile-image profile-image-placeholder">
