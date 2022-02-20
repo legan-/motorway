@@ -6,7 +6,7 @@ type MessageProps = {
   children: string;
 };
 
-export const Message: FC<MessageProps> = children => {
+export const Message: FC<MessageProps> = ({ children }) => {
   if (typeof children !== 'string') {
     return null;
   }
