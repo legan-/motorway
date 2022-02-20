@@ -2,6 +2,6 @@
   align-content: center;
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 15px;
+  grid-template-columns: 400px 400px;
+  gap: 20px;
 }
