@@ -23,3 +23,7 @@ export type Image = {
     total_photos: number;
   };
 };
+
+export type Images = {
+  [id: string]: Image;
+};

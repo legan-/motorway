@@ -1,35 +1,37 @@
 .card {
-  border: 1px solid #DDD;
-  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  border: 10px solid #FFF;
+  border-radius: 20px;
   overflow: hidden;
+  height: 300px;
+  width: 300px;
+  transition: all 0.2s ease-out;
+}
+
+.card .card-overlay {
+  position: absolute;
+  height: 100%;
   width: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  color: #EEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, .4);
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
 }
 
 .card .image {
   object-fit: cover;
-  height: 400px;
-  width: 400px;
-}
-
-.card .user-details {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px;
-}
-
-.card .user-details .profile-image {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-}
-.card .user-details .profile-image-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #777;
-  color: #EEE;
-}
-
-.card .user-details .username {
-  margin-left: 10px;
+  height: 100%;
+  width: 100%;
 }

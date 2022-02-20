@@ -1,0 +1,54 @@
+.preview .preview-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .94);
+}
+
+.preview .preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 50px 50px 100px;
+  pointer-events: none;
+}
+
+.preview .preview-container .preview-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.preview .preview-container .user-details {
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.preview .preview-container .user-details .profile-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+.preview .preview-container .user-details .profile-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #777;
+  color: #EEE;
+}
+
+.preview .preview-container .user-details .user-name {
+  margin-left: 10px;
+  color: #EEE;
+}
