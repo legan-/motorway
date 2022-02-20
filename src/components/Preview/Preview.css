@@ -23,14 +23,20 @@
   height: 100%;
   width: 100%;
   padding: 50px 50px 100px;
+}
+
+.preview .container .image-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
   pointer-events: none;
 }
 
-.preview .container .image {
+.preview .container .image-wrapper .image {
   height: 100%;
   width: 100%;
   object-fit: contain;
-  margin-bottom: 10px;
+  user-select: none;
 }
 
 .preview .container .user-details {

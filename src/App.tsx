@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 import { Card } from 'components/Card/Card';
@@ -57,16 +58,18 @@ export const App = () => {
       ) : (
         <Message>No images found</Message>
       )}
-      {currentImageId && (
-        <Preview
-          imageUrl={images[currentImageId].url}
-          imageAlt={images[currentImageId].alt_description}
-          profileImageUrl={images[currentImageId].user.profile_image}
-          firstName={images[currentImageId].user.first_name}
-          lastName={images[currentImageId].user.last_name}
-          onClose={() => setCurrentImageId(null)}
-        />
-      )}
+      <AnimatePresence>
+        {currentImageId && (
+          <Preview
+            imageUrl={images[currentImageId].url}
+            imageAlt={images[currentImageId].alt_description}
+            profileImageUrl={images[currentImageId].user.profile_image}
+            firstName={images[currentImageId].user.first_name}
+            lastName={images[currentImageId].user.last_name}
+            onClose={() => setCurrentImageId(null)}
+          />
+        )}
+      </AnimatePresence>
     </Container>
   );
 };

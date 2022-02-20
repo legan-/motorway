@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { VFC } from 'react';
 import { FiX } from 'react-icons/fi';
 
@@ -25,11 +26,17 @@ export const Preview: VFC<PreviewProps> = ({
   const fullName = `${firstName} ${lastName}`;
 
   return (
-    <div className="preview">
-      <div className="background" onClick={onClose} />
-      <FiX className="close-button" size={60} onClick={onClose} />
+    <motion.div
+      className="preview"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="container">
-        <img className="image" src={`${imageUrl}.jpg`} alt={imageAlt} />
+        <div className="background" onClick={onClose} />
+        <div className="image-wrapper">
+          <img className="image" src={`${imageUrl}.jpg`} alt={imageAlt} />
+        </div>
         <div className="user-details">
           {profileImageUrl.length ? (
             <img className="profile-image" src={`${profileImageUrl}.webp`} alt={fullName} />
@@ -42,6 +49,7 @@ export const Preview: VFC<PreviewProps> = ({
           <div className="user-name">{fullName}</div>
         </div>
       </div>
-    </div>
+      <FiX className="close-button" size={60} onClick={onClose} />
+    </motion.div>
   );
 };
