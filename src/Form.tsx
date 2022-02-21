@@ -54,6 +54,8 @@ export const Form = () => {
 
             if (Object.keys(errors).length) {
               setErrors(errors);
+            } else {
+              alert('No errors');
             }
 
             setSubmitting(false);
