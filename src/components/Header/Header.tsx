@@ -14,13 +14,13 @@ export const Header: VFC<HeaderProps> = ({ currentVariant, onChange }) => {
   return (
     <motion.div className="header" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <button
-        className={`menu-item ${currentVariant === 'images' ? 'active' : ''}`}
+        className={`button ${currentVariant === 'images' ? 'active' : ''}`}
         onClick={() => onChange('images')}
       >
         Images
       </button>
       <button
-        className={`menu-item ${currentVariant === 'form' ? 'active' : ''}`}
+        className={`button ${currentVariant === 'form' ? 'active' : ''}`}
         onClick={() => onChange('form')}
       >
         Form

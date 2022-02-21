@@ -8,3 +8,34 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+.title {
+  text-align: center;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .5;
+  border: 1px solid #151515;
+  border-radius: 10px;
+  background-color: transparent;
+  margin: 0 5px;
+  padding: 10px 16px;
+  transition: all 0.2s ease-out;
+}
+
+
+.button:hover {
+  background-color: #cccccc;
+}
+
+.button.active {
+  background-color: #151515;
+  color: #EEE;
+}
+
+.button.active:hover {
+  cursor: default;
+}

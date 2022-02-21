@@ -39,6 +39,7 @@ export const Images = () => {
 
   return (
     <>
+      <h1 className="title">Images</h1>
       {isLoading ? (
         <Message>Loading...</Message>
       ) : images ? (

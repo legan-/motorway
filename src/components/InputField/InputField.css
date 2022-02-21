@@ -1,0 +1,33 @@
+.input-field {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-field label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-field input {
+  line-height: 24px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 10px;
+  height: 30px;
+}
+
+.input-field .hint {
+  font-size: 14px;
+}
+
+.input-field .error-text {
+  color: #f78f77;
+}
+
+.input-field .error-border {
+  border-color: #f78f77;
+}
