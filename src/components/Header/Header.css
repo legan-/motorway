@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header .menu-item {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .5;
+  border: 1px solid #151515;
+  border-radius: 10px;
+  background-color: transparent;
+  margin: 0 5px;
+  padding: 10px 16px;
+  transition: all 0.2s ease-out;
+}
+
+
+.header .menu-item:hover {
+  background-color: #cccccc;
+}
+
+.header .menu-item.active {
+  background-color: #151515;
+  color: #EEE;
+}
+
+.header .menu-item.active:hover {
+  cursor: default;
+}

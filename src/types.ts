@@ -27,3 +27,5 @@ export type ImageData = {
 export type ImagesObject = {
   [id: string]: ImageData;
 };
+
+export type ViewVariant = 'images' | 'form';
